@@ -44,4 +44,14 @@ And everything should be same as in a normal Ubuntu environment. Use WSL bash an
 
 ![It should be something like this](1.png)
 
+### Recap
+
+First, install WSL.
+
+Second, install build env and qemu on WSL.
+
+Third, Install VcXsrv on Windows.
+
+Lastly, just run xv6 as you are in Ubuntu.
+
 If you have any questions, please consult me at *davidzhang#nyu.edu*. If you liked this, please consider giving me a star. Thanks!
