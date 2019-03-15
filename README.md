@@ -40,7 +40,7 @@ After you install this, you should get two new icons on Windows Desktop, and one
 
 For the last step, we need to tell the WSL where the "Display" is. This can be done by running **export DISPLAY=:0**  on WSL shell. 
 
-And everything should be same as in a normal Ubuntu environment. Use WSL bash and change directory to your xv6 directory, and run **make && make qemu**. If you have did everything correctly, you should be able to see a successful make process, and a qemu window jumps out. You can still use the original WSL shell for inputing xv6 command lines if you want - as I said, it is now basically the same as a standard Ubuntu.
+And everything should be same as in a normal Ubuntu environment. Use WSL bash and change directory to your xv6 directory, and run **make && make qemu**. If you have done everything correctly, you should be able to see a successful make process, and a qemu window jumps out. You can still use the original WSL shell for inputing xv6 command lines if you want - as I said, it is now basically the same as a standard Ubuntu.
 
 ![It should be something like this](1.png)
 
