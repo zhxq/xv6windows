@@ -32,7 +32,7 @@ First, update your repo info using **sudo apt update**. After that, run **sudo a
 
 ### Install VcXsrv (or other X env) on Windows
 
-This is for X compatibility. As I said, WSL does not ship with GUI support, so you need to use something to run GUI for WSL. Since QEMU requires X Window Environment to run (and there is no X support on Windows), you need to install VcXsrv or other X environment (e.g.: Xming) on Windows so you can run GUI on WSL. I used VcXsrv and it worked fine (not sure about others though).
+This is for X compatibility. As I said, WSL does not ship with GUI support, so you need to use something to run GUI for WSL. Since QEMU requires X Window Environment to run (and there is no X support on Windows), you need to install VcXsrv or other X environment (e.g.: Xming) on Windows so you can run GUI on WSL. I used VcXsrv and it worked fine (not sure about others though). VcXsrv can be found at: https://sourceforge.net/projects/vcxsrv/.
 
 After you install this, you should get two new icons on Windows Desktop, and one of them should be **XLaunch**. Run it, for the first dialog box (Select display settings), choose "Multiple Windows", then click "Next". For the second dialog box (Select how to start clients), choose "Start no client". For the third dialog box, just click "Next". Lastly at the confirmation page, click "Finish". The dialog box will disappear, and it will work on background. You can find the X icon on your Start menu tray.
 
