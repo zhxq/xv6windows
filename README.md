@@ -6,7 +6,7 @@ You know what? Run xv6 is not a hard thing on Windows - since Windows is now sup
 ## What is WSL?
 WSL is actually a Linux runtime on Windows, which started not very long ago. It added a Linux runtime on Windows so that people can just run most Linux softwares on Windows, without using Virtual Machines; therefore, WSL provided a great integration for Linux runtime on Windows, and better performance than traditional VMs. 
 
-In fact, for years, people were trying to run things inversely - write Windows runtime on Linux (or other Unix/Unix-Like systems), and that is what we call "Wine", which stands for "Wine Is Not a Emulator". Since this is not supported by Microsoft, there are tons of problems with compatibilities. However, WSL is officially supported by Microsoft and several Linux distributions, so the performance on WSL is just great - not so many hassles comparing to Wine. If there is anything I would like to complain about WSL, then that will be the limitation of not able to run 64 bit softwares on WSL. However, since QEMU does not require 64 bits support (and neither xv6) to work, this is not a problem for this project.
+In fact, for years, people were trying to run things inversely - write Windows runtime on Linux (or other Unix/Unix-Like systems), and that is what we call "Wine", which stands for "Wine Is Not an Emulator". Since this is not supported by Microsoft, there are tons of problems with compatibilities. However, WSL is officially supported by Microsoft and several Linux distributions, so the performance on WSL is just great - not so many hassles comparing to Wine. If there is anything I would like to complain about WSL, then that will be the limitation of not able to run 32 bit softwares on WSL. However, since QEMU does not require 32 bits support (and neither xv6) to work, this is not a problem for this project.
 
 ## Enough story, how to run xv6 on WSL?
 OK, enough mumble jumble. Here is the thing.
@@ -22,7 +22,7 @@ You need to reboot your computer when prompted.
 
 ### Install qemu on WSL
 
-Congrats! You've finished your first step. Now you can run most Command Line Interface (CLI) based 32 bits Linux softwares on WSL. I will talk about how to get Graphic User Interface (GUI) work in the next part. 
+Congrats! You've finished your first step. Now you can run most Command Line Interface (CLI) based 64 bits Linux softwares on WSL. I will talk about how to get Graphic User Interface (GUI) work in the next part. 
 
 Now, press Win+R to open a "Run" dialog box, and input "bash" and press Enter. If that did not work, try input "ubuntu" if you chose Ubuntu in the last step, then press enter. You will now see a beautiful black-and-white command line prompt window, and that is the shell for WSL.
 
