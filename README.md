@@ -30,15 +30,19 @@ Just like you would usually do with Ubuntu, you will want to install softwares. 
 
 First, update your repo info using **sudo apt update**. After that, run **sudo apt upgrade**, and then run **sudo apt install build-essential qemu** (This is for installing building environments and qemu itself). Confirm and wait for it - this will take some time. You can read the next part during this time - that is multitasking!
 
-### Install VcXsrv (or other X env) on Windows
+### Install VcXsrv (or other X env) on Windows (Not required, see next section)
 
 This is for X compatibility. As I said, WSL does not ship with GUI support, so you need to use something to run GUI for WSL. Since QEMU requires X Window Environment to run (and there is no X support on Windows), you need to install VcXsrv or other X environment (e.g.: Xming) on Windows so you can run GUI on WSL. I used VcXsrv and it worked fine (not sure about others though). VcXsrv can be found at: https://sourceforge.net/projects/vcxsrv/.
 
 After you install this, you should get two new icons on Windows Desktop, and one of them should be **XLaunch**. Run it, for the first dialog box (Select display settings), choose "Multiple Windows", then click "Next". For the second dialog box (Select how to start clients), choose "Start no client". For the third dialog box, just click "Next". Lastly at the confirmation page, click "Finish". The dialog box will disappear, and it will work on background. You can find the X icon on your Start menu tray.
 
+### If you don't want to install X env...
+
+Just skip whatever I said in the previous section. Add `-nographic` attribute to `qemu`, e.g. `qemu-system-i386 -serial mon:stdio -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv -nographic` (See the last attribute?). This should let you run qemu as a command line program in your current terminal.
+
 ### Run xv6
 
-For the last step, we need to tell the WSL where the "Display" is. This can be done by running **export DISPLAY=:0**  on WSL shell. 
+For the last step - if you want to run qemu with X env, we need to tell the WSL where the "Display" is. This can be done by running **export DISPLAY=:0**  on WSL shell. If you chose not to install X env, that's fine - you'll just control your qemu in the same terminal you are currently using.
 
 And everything should be same as in a normal Ubuntu environment. Use WSL bash and change directory to your xv6 directory, and run **make && make qemu**. If you have done everything correctly, you should be able to see a successful make process, and a qemu window jumps out. You can still use the original WSL shell for inputing xv6 command lines if you want - as I said, it is now basically the same as a standard Ubuntu.
 
@@ -50,8 +54,8 @@ First, install WSL.
 
 Second, install build env and qemu on WSL.
 
-Third, Install VcXsrv on Windows.
+Third, Install VcXsrv on Windows (if you want to use X env).
 
-Lastly, just run xv6 as you are in Ubuntu.
+Lastly, just run xv6 as you were in Ubuntu.
 
-If you have any questions, please consult me at *davidzhang#nyu.edu*. If you liked this, please consider giving me a star. Thanks!
+If you have any questions, please consult me at *xzhang84#syr.edu*. If you liked this, please consider giving me a star. Thanks!
