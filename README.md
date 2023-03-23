@@ -1,7 +1,7 @@
 # xv6windows
 Run xv6 on Windows, manual by Xiangqun Zhang (zhxq).
 
-You know what? Run xv6 is not a hard thing on Windows - since Windows is now supporting Windows Subsystem for Linux, it is possible to run Linux app on Windows. Though I believe there is a way to run QEMU and xv6 directly on Windows using mingw or other compilers, I believe it would be a less hassle if use WSL.
+You know what? Run xv6 is not a hard thing on Windows - since Windows is now supporting Windows Subsystem for Linux, it is possible to run Linux app on Windows. Though I believe there is a way to run QEMU and xv6 directly on Windows using mingw or other compilers, I believe it would be less of a hassle if use WSL.
 
 ## What is WSL?
 WSL is actually a Linux runtime on Windows, which started not very long ago. It added a Linux runtime on Windows so that people can just run most Linux softwares on Windows, without using Virtual Machines; therefore, WSL provided a great integration for Linux runtime on Windows, and better performance than traditional VMs. 
